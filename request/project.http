@@ -1,5 +1,4 @@
 ### create project
-
 POST http://localhost:3000/project/create
 Authorization: Bearer {{$dotenv token}}
 Content-Type: application/json
@@ -9,4 +8,17 @@ Content-Type: application/json
     "text" : "mahdavimahdavimahdavimahdavimahdavimahdavimahdavimahdavimahdavimahdavimahdavi"
 }
 
+### list project
+GET http://localhost:3000/project/list
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
 
+### get project by id
+GET http://localhost:3000/project/6396f54ecc7aea333ff0eb01
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+### remove project
+DELETE http://localhost:3000/project/remove/6396f54ecc7aea333ff0eb01
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json

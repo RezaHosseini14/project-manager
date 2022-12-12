@@ -5,6 +5,7 @@ const ProjectSchema = new mongoose.Schema({
   text: { type: String },
   users: { type: [mongoose.Types.ObjectId], default: [] },
   owner: { type: mongoose.Types.ObjectId, required: true },
+  tags: { type: [], default: [] },
 });
 
 const ProjectModel = mongoose.model("projects", ProjectSchema);
