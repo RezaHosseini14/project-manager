@@ -1,16 +1,14 @@
 const mongoose = require("mongoose");
 
-const TeamSchema = new mongoose.Schema({
+const ProjectSchema = new mongoose.Schema({
   title: { type: String, required: true },
   text: { type: String },
-  image: { type: String, default: "./" },
+  users: { type: [mongoose.Types.ObjectId], default: [] },
   owner: { type: mongoose.Types.ObjectId, required: true },
-  team: { type: mongoose.Types.ObjectId },
-  private: { type: boolean, default: true },
 });
 
-const TeamModel = mongoose.model("team", TeamSchema);
+const ProjectModel = mongoose.model("projects", ProjectSchema);
 
 module.exports = {
-  TeamModel,
+  ProjectModel,
 };

@@ -1,0 +1,19 @@
+### getProfile
+
+http://localhost:3000/user/profile
+Authorization: Bearer {{$dotenv token}}
+
+
+### edit user Profile
+
+POST http://localhost:3000/user/profile
+Authorization: Bearer {{$dotenv token}}
+Content-Type: application/json
+
+{
+    "first_name" : "toghrol",
+    "last_name" : "mahdavi",
+    "skills" : ["programing","nodejs","express.js"]
+}
+
+
